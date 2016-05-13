@@ -5,7 +5,7 @@ ActionTool = require "./action_tool"
 class SaveToolView extends ActionTool.View
 
   do: () ->
-    canvas = @plot_view.canvas_view.canvas[0]
+    canvas = @plot_view.canvas_view.ctx.canvas
     name = "bokeh_plot.png"
 
     if canvas.msToBlob?

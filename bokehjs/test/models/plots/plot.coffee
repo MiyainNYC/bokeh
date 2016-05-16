@@ -190,6 +190,9 @@ describe "Plot.View render", ->
     @test_plot_view.render()
     expect(spy.calledOnce).to.be.true
 
+  it "canvas.ctx attribute should exist to allow tools to grab the DOM canvas", ->
+    expect(@test_plot_view.canvas_view.ctx).to.exist
+
 
 describe "Plot.View update_constraints", ->
 
